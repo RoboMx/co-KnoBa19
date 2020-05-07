@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>co-KnoBa19 | RoboMx</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    </head>
+
+    <body>
+        <section class="section">
+            <div class="container">
+                <h1 class="title has-text-centered">
+                    co-KnoBa19
+                </h1>
+
+                <h2 class="sub-title is-3 has-text-centered">
+                    Knowledge Platform of COVID19 for Healthcare Professionals and Researchers
+                </h2>
+
+                <div class="field is-3">
+                    <label class="label">Your query</label>
+                    <form method="GET" action="/">
+                        
+                        <div class="control">
+                            <input value="{{context.question}}" name="question" class="input" type="text" placeholder="ask any of your query regard COVID-19">
+                        </div>
+                        <br/>
+
+                        <div class="control">
+                            <button class="button is-dark">Submit</button>
+                        </div>
+
+                    </form>
+                    <br/>
+                    {% if context.answer %}
+                        <p style="font-size: 30px" class="help"><span class="is-primary">Answer:</span> {{context.answer}}</p>
+                    {% endif %}
+                    <br/>
+                </div>
+            </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>co-KnoBa19</strong>.<br/> A <a href="https://robomx.tech">RoboMx&reg;</a> creation.
+                </p>
+            </div>
+        </footer>
+
+        <style>
+            footer {
+                padding: 3rem 1.5rem 4rem;
+            }
+        </style>
+    </body>
+</html>
